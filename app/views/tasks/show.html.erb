@@ -1,0 +1,19 @@
+<h1><%= @task.title %></h1>
+
+<p class="bg-light rounded p-4 border"><%= @task.details %></p>
+
+<div class="d-flex align-items-center mb-3">
+  <% if @task.completed %>
+    <i class="far fa-check-square mr-2"></i>
+    <span>This task is completed</span>
+  <% else %>
+    <i class="far fa-square mr-2"></i>
+    <span>This task is not completed yet</span>
+  <% end %>
+</div>
+
+<button class="btn btn-light mb-3 border"><%= link_to "Edit task", edit_task_path %></button>
+
+<br><p class="border-bottom"></p>
+
+<%= link_to "Back to list", tasks_path %>
